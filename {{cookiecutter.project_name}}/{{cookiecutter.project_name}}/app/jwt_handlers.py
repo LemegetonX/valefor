@@ -1,7 +1,6 @@
 import typing
 
 from ..app import jwt
-
 from ..user.models import User
 
 

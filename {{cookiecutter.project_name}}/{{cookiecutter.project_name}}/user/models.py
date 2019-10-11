@@ -1,7 +1,7 @@
-from ..app import db
-
-from slugify import slugify
 from passlib.hash import argon2
+from slugify import slugify
+
+from ..app import db
 
 
 class User(db.Model):

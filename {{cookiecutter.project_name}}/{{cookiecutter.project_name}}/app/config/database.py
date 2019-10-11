@@ -1,7 +1,8 @@
 import os
 
-from .provider import configuration
 from .base import BaseConfig
+from .provider import configuration
+
 
 class DatabaseConfig:
     MIGRATIONS_DIR = os.path.join(BaseConfig.APP_DIR, "migrations/")
@@ -12,5 +13,7 @@ class DatabaseConfig:
     DB_PORT = configuration.get_credential("db_port")
     DB_USER = configuration.get_credential("db_user")
 
-    SQLALCHEMY_DATABASE_URI = f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    SQLALCHEMY_DATABASE_URI = (
+        f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
