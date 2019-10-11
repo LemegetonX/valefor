@@ -9,4 +9,9 @@
 </p>
 
 # Composition template
-1. 
+
+1. Flask (web-framework)
+2. Flask-SQLAlchemy + Flask-Migrate (database)
+3. Flask-JWT (auth)
+4. Sitri (config)
+5. Healthcheck (status check)
