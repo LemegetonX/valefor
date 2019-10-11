@@ -1,0 +1,9 @@
+jwt:
+  lifespan:
+    access:
+      hours: 24
+
+    refresh:
+      days: 30
+
+  algorithm: "HS512"
