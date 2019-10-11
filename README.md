@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://github.com/lemegetonx/valefor">
-    <img src="static/logo.jpg">
+    <img src="static/logo.gif">
   </a>
   <h1 align="center">
     Valefor Cookiecutter Template for Flask-backend
