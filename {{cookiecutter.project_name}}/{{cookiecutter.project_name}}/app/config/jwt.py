@@ -1,3 +1,5 @@
+import os
+
 from .provider import configuration
 
 
@@ -9,3 +11,4 @@ class JWTConfig:
         "jwt.lifespan.refresh", path_mode=True
     )
     JWT_ALGORITHM = configuration.get_config("jwt.algorithm", path_mode=True)
+    JWT_SECRET_KEY = os.urandom(128)
