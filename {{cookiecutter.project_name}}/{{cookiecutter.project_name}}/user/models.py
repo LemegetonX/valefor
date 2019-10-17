@@ -16,6 +16,10 @@ class User(db.Model):
         assert value == slugify(value), "Incorrect username!"
 
         return value
+    
+    @classmethod
+    def lookup(cls, username) -> "User":
+        return User.query.filter_by(username=username).first()
 
     @property
     def password(self) -> str:
@@ -27,3 +31,4 @@ class User(db.Model):
 
     def check_password(self, candidate: str) -> bool:
         return argon2.verify(candidate, self._password_hash)
+
